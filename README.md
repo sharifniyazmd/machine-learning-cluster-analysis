@@ -1,8 +1,8 @@
 ## Abstract
 Modern portfolio theory(MPT) states that an investor can duild a portfolio of diverse stocks to maximize returns for a given level of risk.
-Using diversification risk can be reduced, the idea behid diversification is to split investment between varying companies so that if a few stocks one owned decrease in value, the others would not, reducing the loss.
-The plunge in a stock price can be result of any factor such as management change, global econmic decisions, annual reports. Thus, by selecting stocks that are different from each other optimizes returns. 
-As we observe two stocks in the same industry move together, having stocks from different industries will be a good investment as it mitigates risk involved.<br/>
+Risk can be reduced using diversification, the idea behid diversification is to split investment between varying companies so that if a few stocks one owned decrease in value, the others would not, thus reducing the loss.
+The plunge in a stock price can be due to various factors such as management change, global econmic decisions or company's annual report. Thus, by selecting stocks that are different from each other optimizes returns. <br/>
+As we observe two stocks in the same industry move together such as IT stocks which have similar pattern. If industry performs better they all surge together and if not they plunge, so by having stocks from different industries will be a good investment as it mitigates risk involved.<br/>
 <br/>Machine learning can be used to diversify portfolio. Therefore, a method to cluster stocks would help in efficient decision making and to have diverse portfolio.
 
 ## Environment
