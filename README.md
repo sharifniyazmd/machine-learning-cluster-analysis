@@ -13,13 +13,12 @@ We perform data cleaning and transformation and machine learning in this environ
 The Standard & Poor’s 500, or the S&P 500, is an American stock market index based on 500
 large companies with stock listed on the NYSE or NASDAQ. The S&P 500 is one of the most
 commonly followed equity indices and is considered the best representation of the US stock market.<br/>
-..* In this project I am fetching the pricing data for the S&P 500 stocks from google finance api from Jan 1, 2018 to current date.<br/>
+  *  In this project I am fetching the pricing data for the S&P 500 stocks from google finance api from Jan 1, 2018 to current date.<br/>
 
-Upon validating the consistency of data we got, it is found that there are few Nan values which needs to be fixed. We have assigned 0 to such records.
-<br/>Then we will calculate their historic returns and volatility and then proceed to use the **K-Means clustering**
+  * Upon validating the consistency of data we got, it is found that there are few "Nan" values in the data we got from google api which needs to be fixed. I have assigned 0 to such records.<br/>
+  * Then I am calculatin their historic returns and volatility and then proceed to use the **K-Means clustering**
 algorithm to divide the stocks into distinct groups based upon said returns and volatilities.
-<br/>
-##Workflow
+## Workflow
 In K-means clustering the critical part is to decide how many clusters do we want to divide our data into.<br/>
 For this purpose we use "Elbow Curve". It is a relationship between number of clusters we select and
 the Sum of Squared Errors (SSE) resulting from using that number of clusters called as within cluster sum of squares.<br/>
@@ -30,15 +29,11 @@ center point C1. Let’s say there are 3 points in cluster 1 (c1p1, c1p2, c1p3).
 [dist(C1, c1p1) ]² + [dist(C1, c1p2)]² + [dist(C1, c1p3)]². This is cluster 1 sum of squares.<br/>
 Similarly we do the same for C2, C3, C4 and C5. Now, we add the sum of all 5 ‘clusters sum of squares’ to get WCSS.
 <br/>
-We want to find number of clusters which gives minimal Sum of Squares error(SSE) i.e, the sum of squares of data points(stocks) from centroid 
-of ith cluster should be minimum.
-Upon observing elbow curve starts the reduction in the SSE begins to slow down for each increase in cluster number. <br/>
-Optimal number of clusters would be "5".
-
-<br/>
-Scatter plot is then used to visualize the clusters. Constructed a dataframe with stock symbol and the cluster it belongs.
-<br/>
-Exported the data into a csv file, which can be used to build diverse portfolio.
+We want to find number of clusters which gives minimal Sum of Squares error(SSE) i.e, the sum of squares of data points(stocks) from centroid  of ith cluster should be minimum.
+  * Upon observing elbow curve starts the reduction in the SSE begins to slow down for each increase in cluster number. <br/>
+   Optimal number of clusters would be "5".<br/>
+  * Scatter plot is then used to visualize the clusters. Constructed a dataframe with stock symbol and the cluster it belongs.<br/>
+  * Exported the data into a csv file, which can be used to build diverse portfolio.
 
 ## Conclusion
 Thus dividing stocks into groups with “similar characteristics” can help in portfolio construction to 
