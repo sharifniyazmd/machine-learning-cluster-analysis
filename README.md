@@ -7,7 +7,7 @@ As we observe two stocks in the same industry move together such as IT stocks wh
 
 ## Environment
 Used Jupyter Notebook which is an open-source web application.
-We perform data cleaning and transformation and machine learning in this environment.
+Performed data cleaning and transformation and machine learning in this environment.
 
 ## Data Collection and Wrangling
 The Standard & Poor’s 500, or the S&P 500, is an American stock market index based on 500
@@ -15,14 +15,14 @@ large companies with stock listed on the NYSE or NASDAQ. The S&P 500 is one of t
 commonly followed equity indices and is considered the best representation of the US stock market.<br/>
   *  In this project I am fetching the pricing data for the S&P 500 stocks from google finance api from Jan 1, 2018 to current date.<br/>
 
-  * Upon validating the consistency of data we got, it is found that there are few "Nan" values in the data we got from google api which needs to be fixed. I have assigned 0 to such records.<br/>
+  * Upon validating the consistency, it is found that there are few "Nan" values in the data we got from google api which needs to be fixed. I have assigned 0 to such records.<br/>
   * Then I am calculatin their historic returns and volatility and then proceed to use the **K-Means clustering**
 algorithm to divide the stocks into distinct groups based upon said returns and volatilities.
 ## Workflow
 In K-means clustering the critical part is to decide how many clusters do we want to divide our data into.<br/>
-For this purpose we use "Elbow Curve". It is a relationship between number of clusters we select and
+For this purpose "Elbow Curve" is used. It is a relationship between number of clusters we select and
 the Sum of Squared Errors (SSE) resulting from using that number of clusters called as within cluster sum of squares.<br/>
-**Note:** WCSS -Within Cluster Sum of Squares. For e.g, let’s assume there are 5 clusters. That means, we have 3 center points (C1, C2, C3) for our 3 clusters.
+**Note:** WCSS -Within Cluster Sum of Squares. For e.g, let’s assume there are 5 clusters. That means, we have 5 center points (C1, C2, C3, C4, C5) for our 5 clusters.
 Each data point(here each stock) falls into the zone of either C1 or C2 or C3 or C4 or C4 or C5. <br/>
 First we calculate the sum of squares of the distance of each data point in cluster 1 from their 
 center point C1. Let’s say there are 3 points in cluster 1 (c1p1, c1p2, c1p3).
